@@ -1,0 +1,32 @@
+<!-- <div *ngIf="productList">
+  <h3>Lista de productos</h3>
+  <div *ngFor="let product of productList">
+    <img [src]="product.image" [alt]="product.name">
+<h4>{{ product.name }}</h4>
+<h4>{{ product.price}}</h4>
+<h4>{{ product.description}}</h4>
+<h4>{{ product.stars}}</h4>
+  </div>
+</div> -->
+
+
+
+
+
+<div *ngIf="productList" class="container">
+    <h3 class="text-center">Lista de productos</h3>
+    <input  placeholder="Search" type="text" (input)="searchChange($event)">
+
+    <div class="row text-center text-md-left">
+  <div class="col-lg-3 col-md-6 col-sm-12 pt-5" *ngFor="let product of productList">
+
+      <img [src]="product.image" [alt]="product.name" class="card-img-top">
+    <h5 >{{ product.name }}</h5>
+    <h5 >{{ product.description}}</h5>
+    <div class="Bold text">
+    <h5 >{{ product.price}}€</h5>
+  </div>
+    <h5 >Estrellas: {{ product.stars}} <h5 class="btn btn-outline-primary">Comprar</h5> </h5>
+
+  </div>
+</div>

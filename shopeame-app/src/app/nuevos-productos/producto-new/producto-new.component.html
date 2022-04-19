@@ -1,0 +1,14 @@
+
+<div *ngIf="productList" class="deleteForm ">
+      <h3 class="pb-3">Eliminación de productos</h3>
+      <div class="row">
+
+    <div class="col-3  pt-2" *ngFor="let product of productList">
+      <img [src]="product.image" [alt]="product.name" class="sizeimg">
+
+      <h5 >{{ product.name }}</h5>
+      <button class="paddingP" href="#" class="btn btn-outline-primary" (click)="deleteProduct(product.id)">Eliminar</button>
+    </div>
+    </div>
+
+  </div>
